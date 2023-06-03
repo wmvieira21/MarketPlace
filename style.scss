@@ -12,7 +12,7 @@ body {
 
 .products-section {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 15rem);
+  grid-template-columns: repeat(auto-fill, 12rem);
   grid-auto-flow: row;
   grid-template-rows: repeat(auto-fill, 35rem);
   gap: 2rem;
