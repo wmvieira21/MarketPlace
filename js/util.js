@@ -53,17 +53,20 @@ const buildFigureComponent = (parent, product) => {
 };
 
 const buildProductInfo = (parent, product) => {
+  
+  let { title, price: precoLet, category } = product;
+
   const productInfo = document.createElement("div");
   productInfo.className = "product-info-container";
 
   const productTitle = document.createElement("h4");
-  productTitle.innerHTML = product.title;
+  productTitle.innerHTML = title;
 
   const productPrice = document.createElement("h3");
-  productPrice.innerHTML = product.price;
+  productPrice.innerHTML = precoLet;
 
   const productCategory = document.createElement("h6");
-  productCategory.innerHTML = product.category;
+  productCategory.innerHTML = category;
 
   productInfo.appendChild(productTitle);
   productInfo.appendChild(productPrice);
@@ -81,7 +84,7 @@ const buildButtons = (parent, product) => {
   buyButton.type = "button";
   buyButton.value = product.id;
   buyButton.innerHTML = "BUY";
-  
+
   divButton.appendChild(buyButton);
   parent.appendChild(divButton);
 };

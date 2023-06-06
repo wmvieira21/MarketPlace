@@ -6,7 +6,6 @@ import loadEvents from "./events.js";
   util
     .getProductsAPI()
     .then((result) => {
-      console.log(result);
       util.buildProductsCanvas(products.createProducts(result));
     })
     .catch((err) => {

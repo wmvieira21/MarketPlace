@@ -1,65 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
 
-    <title>MarketPlace</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 
-  <body>
-    <header>
-      <section class="main-header">
-        <div class="main-cart-container">
-          <div data-cart="0" class="main-cart__cartSVG">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="44px"
-              viewBox="0 0 24 24"
-              width="44px"
-              fill="#FFFFFF"
-            >
+  <title>MarketPlace</title>
+</head>
+
+<body>
+  <header>
+    <section class="main-header">
+      <div class="main-cart-container">
+        <div data-cart="0" class="main-cart__cartSVG">
+          <button class="btn-cart-buy">
+            <svg xmlns="http://www.w3.org/2000/svg" height="44px" viewBox="0 0 24 24" width="44px" fill="#FFFFFF">
               <path d="M0 0h24v24H0V0z" fill="none" />
               <path
-                d="M15.55 13c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.37-.66-.11-1.48-.87-1.48H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2h7.45zM6.16 6h12.15l-2.76 5H8.53L6.16 6zM7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
-              />
+                d="M15.55 13c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.37-.66-.11-1.48-.87-1.48H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2h7.45zM6.16 6h12.15l-2.76 5H8.53L6.16 6zM7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
             </svg>
-          </div>
-          <span class="main-cart__cartTitle">Cart</span>
+          </button>
         </div>
-      </section>
-    </header>
-    <main>
-      <section class="products-section">
-        <!-- <div class="product-container">
-                <figure class="product-image__container">
-                    <img id="product-image__url" src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
-                        alt="image product API">
-                    <figcaption id="product-image__caption">Your perfect pack for everyday use and walks in the forest.
-                        Stash your laptop (up to 15 inches) in the padded sleeve, your everyday</figcaption>
-                </figure>
+        <span class="main-cart__cartTitle">Cart</span>
+      </div>
+    </section>
+  </header>
+  <main>
+    <section class="products-section">
+      <!-- <div class="product-container">
+        <figure class="product-image__container">
+          <img id="product-image__url" src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+            alt="image product API">
+          <figcaption id="product-image__caption">Your perfect pack for everyday use and walks in the forest.
+            Stash your laptop (up to 15 inches) in the padded sleeve, your everyday</figcaption>
+        </figure>
 
-                <h4 id="product-title">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h4>
-                <h3 id="product-price">$109.95</h3>
-                <h6 id="product-category">men's clothing</h6>
+        <h4 id="product-title">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h4>
+        <h3 id="product-price">$109.95</h3>
+        <h6 id="product-category">men's clothing</h6>
 
-                <section class="product-rating">
-                    <span id="product-rating__star1"></span>
-                    <span id="product-rating__star2"></span>
-                    <span id="product-rating__star3"></span>
-                    <span id="product-rating__star4"></span>
-                    <span id="product-rating__star5"></span>
-                </section>
+        <section class="product-rating">
+          <span id="product-rating__star1">
+            <use xlink:href="#SVGRepo_iconCarrier" x="10" y="10" />
+          </span>
+          <span id="product-rating__star2"></span>
+          <span id="product-rating__star3"></span>
+          <span id="product-rating__star4"></span>
+          <span id="product-rating__star5"></span>
+        </section>
 
-                <div class="product-button">
-                    <button class="product-button__buy" type="button">Buy</button>
-                </div>
-            </div> -->
-      </section>
-    </main>
-    <!-- Using module 'this' will be undefined -->
-    <script type="module" src="./js/main.js"></script>
-  </body>
+        <div class="product-button">
+          <button class="product-button__buy" type="button">Buy</button>
+        </div>
+      </div> -->
+    </section>
+  </main>
+  <!-- Using module 'this' will be undefined -->
+  <script type="module" src="./js/main.js"></script>
+</body>
+
 </html>
