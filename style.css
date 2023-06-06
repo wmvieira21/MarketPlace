@@ -11,6 +11,11 @@ main {
 }
 
 .main-header {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: #232f3e;
 }
 .main-header .main-cart-container {
@@ -98,6 +103,26 @@ main {
 }
 .products-section .product-container .product-info-container {
   height: 11rem;
+}
+
+.backdrop {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.644);
+}
+
+.main-checkout {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 30rem;
+  height: 100vh;
+  background-color: whitesmoke;
+  z-index: 10;
 }
 
 /*# sourceMappingURL=style.css.map */
