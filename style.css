@@ -7,7 +7,7 @@
 }
 
 main {
-  margin: 2rem;
+  margin: 7rem 2rem;
 }
 
 .main-header {
@@ -23,7 +23,7 @@ main {
   justify-content: flex-end;
   align-items: flex-end;
   padding: 0.5rem;
-  height: 5rem;
+  height: 5.5rem;
 }
 .main-header .main-cart-container .main-cart__cartSVG {
   height: 100%;
@@ -44,16 +44,17 @@ main {
 }
 .main-header .main-cart-container .main-cart__cartSVG::after {
   content: attr(data-cart);
-  color: white;
+  color: orange;
   position: absolute;
-  left: 30%;
-  top: 5%;
-  background-color: gray;
+  left: 20%;
+  top: 0%;
+  background-color: #48607f;
   width: 16px;
   border-radius: 50%;
   text-align: center;
-  font-size: 0.7rem;
-  padding: 0.2rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 0.3rem;
 }
 .main-header .main-cart-container .main-cart__cartTitle {
   color: whitesmoke;
@@ -123,6 +124,21 @@ main {
   height: 100vh;
   background-color: whitesmoke;
   z-index: 10;
+  margin-top: 6rem;
+}
+.main-checkout .main-checkout__cart {
+  display: flex;
+  margin: 1rem;
+  border: 1px solid rgba(128, 128, 128, 0.171);
+  border-radius: 3px;
+  padding: 1rem;
+}
+.main-checkout .main-checkout__cart figure {
+  display: flex;
+}
+.main-checkout .main-checkout__cart figure img {
+  width: 4rem;
+  aspect-ratio: 1/1;
 }
 
 /*# sourceMappingURL=style.css.map */
