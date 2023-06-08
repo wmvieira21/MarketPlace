@@ -85,7 +85,7 @@ main {
   color: #565959;
   font-size: 0.8rem;
 }
-.products-section .product-container .product-button .product-button__buy {
+.products-section .product-container .product-button .product-button__addCart {
   background-color: rgba(132, 132, 132, 0.531);
   width: 100%;
   height: 2rem;
@@ -114,31 +114,80 @@ main {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.644);
+  display: none;
 }
 
 .main-checkout {
   position: fixed;
   right: 0;
-  top: 0;
-  width: 30rem;
-  height: 100vh;
+  top: 5.5rem;
+  width: 40rem;
+  height: 90%;
   background-color: whitesmoke;
   z-index: 10;
-  margin-top: 6rem;
+  display: none;
+  flex-direction: column;
+  overflow: scroll;
 }
 .main-checkout .main-checkout__cart {
   display: flex;
+  align-items: center;
+  gap: 0.5rem;
   margin: 1rem;
   border: 1px solid rgba(128, 128, 128, 0.171);
   border-radius: 3px;
   padding: 1rem;
+  position: relative;
 }
-.main-checkout .main-checkout__cart figure {
-  display: flex;
+.main-checkout .main-checkout__cart .main-checkout__cart--remove {
+  position: absolute;
+  right: 1%;
+  top: 2%;
+  width: 1rem;
+  aspect-ratio: 1/1;
+  background-color: #232f3e;
+  border: none;
+  color: whitesmoke;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+}
+.main-checkout .main-checkout__cart .main-checkout__cart--remove:hover {
+  background-color: #565959;
 }
 .main-checkout .main-checkout__cart figure img {
   width: 4rem;
   aspect-ratio: 1/1;
+}
+.main-checkout .main-checkout__cart #product-title {
+  width: 20rem;
+}
+.main-checkout .main-checkout__cart .main-checkout__price {
+  width: 8rem;
+}
+.main-checkout .main-checkout__cart .main-checkout__price .main-checkout__quantidade #main-checkout__price--qt {
+  width: 3rem;
+}
+.main-checkout .main-checkout__buttons {
+  margin: 5rem auto;
+}
+.main-checkout .main-checkout__buttons button {
+  width: 10rem;
+  height: 2rem;
+  border: none;
+  color: whitesmoke;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.main-checkout .main-checkout__buttons .main-checkout__buy {
+  background-color: rgba(29, 141, 29, 0.8);
+}
+.main-checkout .main-checkout__buttons .main-checkout__cancel {
+  background-color: rgba(151, 48, 48, 0.8);
+}
+.main-checkout .main-checkout__buttons button:active {
+  transform: scale(0.95);
 }
 
 /*# sourceMappingURL=style.css.map */

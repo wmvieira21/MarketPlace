@@ -1,12 +1,13 @@
-import * as products from "./products.js";
-import * as util from "./util.js";
+import * as products from "./model/products.js";
+import * as util from "./util/util.js";
 import loadEvents from "./events.js";
+import * as utilProducts from './util/utilProducts.js';
 
 (function () {
   util
     .getProductsAPI()
     .then((result) => {
-      util.buildProductsCanvas(products.createProducts(result));
+      utilProducts.buildProductsCanvas(products.createProducts(result));
     })
     .catch((err) => {
       console.log(err);
