@@ -1,15 +1,16 @@
 import * as init from '../init.js';
+import * as itemsCart from '../model/itemsCart.js';
 
 export default function buildCanvasCart(item) {
     const divCheckoutContainer = document.createElement('div');
     divCheckoutContainer.className = 'main-checkout__cart';
 
-    buildCloseButton(divCheckoutContainer);
+    buildCloseButton(divCheckoutContainer, item);
     buildFigureComponent(divCheckoutContainer, item);
     buildTitle(divCheckoutContainer, item);
     buildPriceContainer(divCheckoutContainer, item);
 
-    init.mainCheckout.insertBefore(divCheckoutContainer, init.btnsCart);
+    init.mainCheckoutItems.appendChild(divCheckoutContainer, init.totalPanel);
 }
 
 function buildFigureComponent(parent, item) {
@@ -23,10 +24,14 @@ function buildFigureComponent(parent, item) {
     parent.appendChild(figure);
 }
 
-function buildCloseButton(parent) {
+function buildCloseButton(parent, item) {
     const closeButton = document.createElement('button');
     closeButton.innerHTML = 'X';
     closeButton.className = 'main-checkout__cart--remove';
+    closeButton.value = item.id;
+    closeButton.type = 'button';
+
+    addEventListenerComponent(closeButton, 'click', parent);
 
     parent.appendChild(closeButton);
 }
@@ -40,15 +45,9 @@ function buildTitle(parent, item) {
 }
 
 function buildPriceContainer(parent, item) {
-    const divCheckoutPrice = document.createElement('div');
-    divCheckoutPrice.className = 'main-checkout__price';
-
     const price = document.createElement('h3');
     price.id = 'product-price';
     price.innerHTML = item.price;
-    console.dir(price);
-
-    divCheckoutPrice.appendChild(price);
 
     const divCheckoutPriceQt = document.createElement('div');
     divCheckoutPriceQt.className = 'main-checkout__quantidade';
@@ -67,7 +66,17 @@ function buildPriceContainer(parent, item) {
     divCheckoutPriceQt.appendChild(priceQuantidadeLabel);
     divCheckoutPriceQt.appendChild(priceQuantidadeInput);
 
-    divCheckoutPrice.appendChild(divCheckoutPriceQt);
+    parent.appendChild(divCheckoutPriceQt);
+    parent.appendChild(price);
+}
 
-    parent.appendChild(divCheckoutPrice);
+function addEventListenerComponent(component, eventName, parentCart) {
+    if (component instanceof HTMLButtonElement) {
+        component.addEventListener(eventName, (event) => {
+            itemsCart.removeItemCart(event.target.value);
+            init.mainCheckoutItems.removeChild(parentCart);
+
+            itemsCart.updateCartBalloon(itemsCart.getItensCartArray().length);
+        });
+    }
 }

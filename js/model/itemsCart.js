@@ -1,6 +1,6 @@
 import buildCanvasCart from '../util/utilCart.js';
 
-const itensCartArray = [];
+let itensCartArray = [];
 
 export function ItensCart(imgSrc, title, price, id) {
     this.imgSrc = imgSrc;
@@ -11,7 +11,7 @@ export function ItensCart(imgSrc, title, price, id) {
 
 export function addShoppingCart(imgSrc, title, price, id) {
     if (checkItemCart(id)) {
-        return alert('This item has already been added to the shopping cart!');
+        alert('This item has already been added to the shopping cart!');
     } else {
         const itemCart = Object.create(ItensCart);
 
@@ -21,10 +21,9 @@ export function addShoppingCart(imgSrc, title, price, id) {
         itemCart.id = id;
 
         itensCartArray.push(itemCart);
-        
-        buildCanvasCart(itemCart);
 
-        return true;
+        updateCartBalloon(itensCartArray.length);
+        buildCanvasCart(itemCart);
     }
 }
 
@@ -40,4 +39,15 @@ export function getItensCartArray() {
 
 export function clearCart() {
     this.itensCartArray = [];
+}
+
+export function removeItemCart(id) {
+    itensCartArray = itensCartArray.filter(item => {
+        return item.id !== parseInt(id);
+    });
+    updateCartBalloon(itensCartArray.length);
+}
+
+export function updateCartBalloon(qtItensCart) {
+    document.querySelector(".main-cart__cartSVG").dataset.cart = qtItensCart;
 }
