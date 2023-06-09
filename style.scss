@@ -42,10 +42,11 @@ main {
         background-color: transparent;
         cursor: pointer;
 
-        :active,
-        :focus {
-          transform: scale(0.9);
-        }
+      }
+
+      :active,
+      :focus {
+        transform: scale(0.9);
       }
     }
 

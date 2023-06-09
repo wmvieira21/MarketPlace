@@ -38,8 +38,8 @@ main {
   background-color: transparent;
   cursor: pointer;
 }
-.main-header .main-cart-container .main-cart__cartSVG .btn-cart-buy :active,
-.main-header .main-cart-container .main-cart__cartSVG .btn-cart-buy :focus {
+.main-header .main-cart-container .main-cart__cartSVG :active,
+.main-header .main-cart-container .main-cart__cartSVG :focus {
   transform: scale(0.9);
 }
 .main-header .main-cart-container .main-cart__cartSVG::after {
