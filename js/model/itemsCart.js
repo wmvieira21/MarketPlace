@@ -38,7 +38,7 @@ export function getItensCartArray() {
 }
 
 export function clearCart() {
-    this.itensCartArray = [];
+    itensCartArray = [];
 }
 
 export function removeItemCart(id) {
@@ -50,4 +50,18 @@ export function removeItemCart(id) {
 
 export function updateCartBalloon(qtItensCart) {
     document.querySelector(".main-cart__cartSVG").dataset.cart = qtItensCart;
+}
+
+export function updatePriceItemCart(id, newPrice) {
+    itensCartArray.map(item => {
+        if (item.id === id) {
+            item.price = newPrice;
+        }
+    });
+};
+
+export function sumCartItensTotal() {
+    return itensCartArray.reduce((total, item) => {
+        return total += item.price;
+    }, 0);
 }

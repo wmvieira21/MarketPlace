@@ -12,8 +12,9 @@
 
 <body>
   <header>
-    <section class="main-header">
+    <nav class="main-header">
       <div class="main-cart-container">
+        <a href="index.html">Market Place</a>
         <div data-cart="0" class="main-cart__cartSVG">
           <button class="btn-cart-buy">
             <svg xmlns="http://www.w3.org/2000/svg" height="44px" viewBox="0 0 24 24" width="44px" fill="#FFFFFF">
@@ -24,47 +25,23 @@
           </button>
         </div>
       </div>
-    </section>
+    </nav>
   </header>
   <main>
     <section class="products-section">
-      <!-- <div class="product-container">
-        <figure class="product-image__container">
-          <img id="product-image__url" src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
-            alt="image product API">
-          <figcaption id="product-image__caption">Your perfect pack for everyday use and walks in the forest.
-            Stash your laptop (up to 15 inches) in the padded sleeve, your everyday</figcaption>
-        </figure>
-
-        <h4 id="product-title">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h4>
-        <h3 id="product-price">$109.95</h3>
-        <h6 id="product-category">men's clothing</h6>
-
-        <section class="product-rating">
-          <span id="product-rating__star1">
-            <use xlink:href="#SVGRepo_iconCarrier" x="10" y="10" />
-          </span>
-          <span id="product-rating__star2"></span>
-          <span id="product-rating__star3"></span>
-          <span id="product-rating__star4"></span>
-          <span id="product-rating__star5"></span>
-        </section>
-
-        <div class="product-button">
-          <button class="product-button__buy" type="button">Buy</button>
-        </div>
-      </div> -->
     </section>
 
     <div class="backdrop"></div>
-    
+
     <div class="main-checkout__container">
       <section class="main-checkout">
       </section>
 
       <section class="main-checkout__info">
         <div class="main-checkout__total">
-          <h1>Total:</h1>
+          <h1>Total:
+            <span id="main-checkout__total--sum"></span>
+          </h1>
         </div>
         <div class="main-checkout__buttons">
           <button class="main-checkout__buy">Buy</button>
@@ -73,6 +50,14 @@
       </section>
     </div>
   </main>
+
+
+  <footer>
+    <section class="fotter">
+      <div class="footer-container"></div>
+    </section>
+  </footer>
+
   <!-- Using module 'this' will be undefined -->
   <script type="module" src="./js/main.js"></script>
 </body>

@@ -43,14 +43,26 @@ const buildProductInfo = (parent, product) => {
     const productTitle = document.createElement("h4");
     productTitle.innerHTML = title;
 
+
+    const divPriceContainer = document.createElement('div');
+    divPriceContainer.className = 'product-info__price'
+
+    const currencySymbol = document.createElement('span');
+    currencySymbol.id = 'currency-symbol';
+    currencySymbol.innerHTML = "$";
+
+    divPriceContainer.appendChild(currencySymbol);
+
     const productPrice = document.createElement("h3");
     productPrice.innerHTML = precoLet;
+    divPriceContainer.appendChild(productPrice);
+
 
     const productCategory = document.createElement("h6");
     productCategory.innerHTML = category;
 
     productInfo.appendChild(productTitle);
-    productInfo.appendChild(productPrice);
+    productInfo.appendChild(divPriceContainer);
     productInfo.appendChild(productCategory);
 
     parent.appendChild(productInfo);

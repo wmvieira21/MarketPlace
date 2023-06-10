@@ -17,7 +17,7 @@ export function createProducts(obj) {
     product.category = element.category;
     product.description = element.description.substring(1, 200);
     product.imageURL = element.image;
-    product.price = `$${element.price}`;
+    product.price = element.price;
     product.rating = element.rating;
     product.title = element.title;
 
